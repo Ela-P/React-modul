@@ -4,7 +4,9 @@ const FriendListItem = (orderIndex, name, age) => {
     return (
         <>
         <div> Our friend item </div>
-        <div className='friendItem'>{`${orderIndex}, ${name} - ${age}`}</div> 
+        <div className='friendItem'>
+        {`${orderIndex}, ${name} - ${age}`}
+        </div> 
         </>
     );
 };

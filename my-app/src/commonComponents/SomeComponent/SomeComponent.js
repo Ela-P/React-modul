@@ -8,7 +8,10 @@ const SomeComponent = ({ name, age, friends }) => {
           <h3>This is my friends:</h3>
           {friends.map((friend, index) =>  {
            return (
-            <FriendListItem key={index} age={friend.age} name={friend.name} orderIndex={index}/>
+            <FriendListItem 
+            key={index} age={friend.age} 
+            name={friend.name} 
+            orderIndex={index}/>
            )
           })}
       </div>
