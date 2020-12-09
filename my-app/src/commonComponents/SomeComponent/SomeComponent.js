@@ -1,6 +1,7 @@
 import React from 'react';
 import FriendListItem from '../FriendListItem/FriendListItem';
 
+
 const SomeComponent = ({ name, age, friends }) => {
     return (
       <div className='wrapper'>

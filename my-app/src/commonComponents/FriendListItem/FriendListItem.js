@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FriendListItem = (orderIndex, name, age) => {
+const FriendListItem = ({orderIndex, name, age}) => {
     return (
         <>
         <div> Our friend item </div>
