@@ -22,7 +22,12 @@ class CounterContainer extends Component {
 
     render() {
         return (
-           <Counter counterValue={this.state.countValue} type={this.state.parityType} handleAdd={this.handleAdd} handleRemove={this.handleRemove}/>
+           <Counter 
+           counterValue={this.state.countValue}
+            type={this.state.parityType} 
+            handleAdd={this.handleAdd}
+            handleRemove={this.handleRemove}
+            />
         );
     }
 }

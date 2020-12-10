@@ -1,0 +1,34 @@
+.counter {
+    margin: 0 auto;
+    width: 300px;
+    min-height: 100px;
+    border: 1px solid black;
+    padding-top: 20px;
+}
+
+.counterView {
+    margin: 0 auto;
+    padding-left: 50px;
+}
+
+.counterValue {
+    text-align: center;
+    margin-bottom: 10px;
+    max-width: 200px;
+    min-height: 50px;
+    border: 1px solid black;
+}
+
+.counterType {
+    text-align: center;
+    max-width: 200px;
+    min-height: 50px;
+    border: 1px solid black;
+}
+
+.counterBut {
+    border-radius: 30%;
+    padding-left: 100px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
