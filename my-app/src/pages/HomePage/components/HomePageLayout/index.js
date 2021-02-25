@@ -8,6 +8,9 @@ const HomePageLayout = ({handleGoToCounter}) => {
         <Link to={ROUTES.COUNTER_PAGE}>
         <button> Go to counter </button>
         </Link>
+        <Link to={ROUTES.WORK_WITH_LISTS_PAGE}>
+        <button> Go to lists </button>
+        </Link>
         </div>
     );
 };
