@@ -1,9 +1,13 @@
 import React from "react";
 
-const ListsPage = () => {
+const ListsPage = ({ userList }) => {
     return (
-        <div>
-        List page 
+        <div >
+        {userList.map(({name, age,gender},  index) => {
+            return <div key={index}>
+                <p>{`${name}, ${age} y.o. (${gender})`}</p>
+            </div>
+        })}
         </div> 
     );
 };
