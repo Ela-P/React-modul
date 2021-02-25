@@ -7,6 +7,8 @@ const Counter = ({ handleGoBack, countValue, parityType, handleDecrement, handle
         <div>
         <p>{countValue}</p>
         <p>{parityType}</p>
+        
+        {countValue % 2 === 0 ?  <div > Even  </div> : <div> Odd </div>}
 
         <div> 
         <button onClick={handleDecrement}>-</button>
@@ -15,6 +17,7 @@ const Counter = ({ handleGoBack, countValue, parityType, handleDecrement, handle
 
 
         <button onClick={handleGoBack}> Go back </button>
+
         </div>
         
      );

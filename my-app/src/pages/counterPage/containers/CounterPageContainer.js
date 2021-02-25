@@ -6,21 +6,21 @@ import Counter from '../components/Counter/index';
 
 
 const CounterPageContainer = () => {
-   const history = useHistory();
+    const history = useHistory();
 
-   const [countValue, setValue] = useState(0);
+    const [countValue, setValue] = useState(0);
 
-   const handleIncrement = useCallback( () => {
-       setValue((state) => state + 1);
-   }, []);
+    const handleIncrement = useCallback( () => {
+        setValue((state) => state + 1);
+    }, []);
 
-   const handleDecrement = useCallback( () => {
-       setValue((state) => state - 1);
-   }, []);
+    const handleDecrement = useCallback( () => {
+        setValue((state) => state - 1);
+    }, []);
 
     const handleGoBack = () => {
-    history.pop();
-}
+        history.pop();
+    }
 
 return (
         <Counter handleGoBack={handleGoBack} countValue={countValue} handleIncrement={handleIncrement} handleDecrement={handleDecrement} />

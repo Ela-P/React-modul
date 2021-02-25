@@ -6,11 +6,11 @@ import { ROUTES } from "./routeNames";
 import HomePageContainer from "../pages/HomePage/container/HomePageContainer";
 import CounterPageContainer from '../pages/counterPage/containers/CounterPageContainer';
 
-function Routes() {
+const Routes = () => {
     return (
         <Switch>
             <Route exact path={ROUTES.HOME_PAGE} component={HomePageContainer} />
-            <Route exact path={ROUTES.COUNTER_PAGE} component={CounterPageContainer} />
+            <Route path={ROUTES.COUNTER_PAGE} component={CounterPageContainer} />
         </Switch>
     );
 }
