@@ -2,13 +2,13 @@ import './Style.css';
 import PropTypes from 'prop-types';
 
 
-const Counter = ({ handleGoBack, countValue, parityType, handleDecrement, handleIncrement }) => {
+const Counter = ({ handleGoBack, isEven, countValue, parityType, handleDecrement, handleIncrement }) => {
     return (
         <div>
         <p>{countValue}</p>
         <p>{parityType}</p>
+        <p>{isEven ? 'Even' : 'Odd'}</p>
         
-        {countValue % 2 === 0 ?  <div > Even  </div> : <div> Odd </div>}
 
         <div> 
         <button onClick={handleDecrement}>-</button>
@@ -28,6 +28,7 @@ Counter.propTypes = {
     handleDecrement: PropTypes.func.isRequired,
     handleGoBack: PropTypes.func.isRequired,
     countValue: PropTypes.number.isRequired,
+    isEven: PropTypes.number.isRequired,
     parityType: PropTypes.string.isRequired,
 }
 
