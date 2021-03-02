@@ -1,16 +1,13 @@
-import React, {Component} from "react";
+import React from "react";
 
 
 import ListsPage from "../components/ListsPage";
 import mockUserList from '../components/config/mockUserList';
 
-class ListsPageContainer extends Component {
-    render() {
-        
-        return (
-         <ListsPage userList={mockUserList}/>
+const ListsPageContainer = () => {
+    return (
+        <ListsPage userList={mockUserList}/>
         );
-    }
 }
 
 export default ListsPageContainer;

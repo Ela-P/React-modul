@@ -29,4 +29,9 @@ export default [
         age: 21,
         gender: 'Female'
     },
+    {
+        name: 'Vasya',
+        age: 16,
+        gender: 'Male'
+    },
 ]

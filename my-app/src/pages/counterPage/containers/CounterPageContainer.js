@@ -1,5 +1,5 @@
 import { useHistory } from 'react-router-dom';
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 
 
 import Counter from '../components/Counter/index';
@@ -25,20 +25,21 @@ const CounterPageContainer = () => {
         });
     }, [counterState.countValue]);
 
-    const handleIncrement = () => {
+    const handleIncrement = useCallback( () => {
         setCounterState((state) => {
             return { 
                 countValue: state.countValue  + 1,
         };
     });
-};
-    const handleDecrement = () => {
+}, []);
+
+    const handleDecrement = useCallback( () => {
         setCounterState((state) => {
             return { 
                 countValue: state.countValue  - 1,
         };
     });
-};
+}, []);
 
     const handleGoBack = () => {
         history.pop();
