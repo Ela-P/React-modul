@@ -7,7 +7,8 @@ const defaultState = {
     isEven: true
 };
 
-const counterReducer = handleActions({
+const counterPage = handleActions({
+
     [actions.INCREMENT_COUNTER_VALUE]: (state) => {
         const incrementValue = state.countValue + 1;
         return {
@@ -15,6 +16,7 @@ const counterReducer = handleActions({
             countValue: incrementValue
         }
     },
+
     [actions.DECREMENT_COUNTER_VALUE]: (state) => {
         const decrementValue = state.countValue - 1;
         return {
@@ -22,6 +24,14 @@ const counterReducer = handleActions({
             countValue: decrementValue
         }
     },
+
+    [actions.CHECK_PARITY_TYPE]: (state) => {
+        const isEven = state.countValue % 2 === 0;
+        return {
+            ...state,
+           isEven
+        }
+    },
 }, defaultState);
 
-export default counterReducer;
+export default counterPage;

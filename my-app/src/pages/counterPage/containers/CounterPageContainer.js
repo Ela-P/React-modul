@@ -1,58 +1,46 @@
-import { useHistory } from 'react-router-dom';
-import React, { useState, useEffect, useCallback } from "react";
 
+import React, { useEffect, useCallback } from "react";
+
+import { useDispatch, useSelector } from 'react-redux';
+import { INCREMENT_COUNTER_VALUE, DECREMENT_COUNTER_VALUE, CHECK_PARITY_TYPE } from '../actions';
 
 import Counter from '../components/Counter/index';
 
 
-const CounterPageContainer = () => {
-   const history = useHistory();
+const CounterPageContainer = ({history}) => {
+ 
 
-    const [counterState, setCounterState] = useState({
-        countValue: 0,
-        isEven: true,
-    });
+    const dispatch = useDispatch();
 
-    useEffect( () => {
-        const isEven = counterState.countValue % 2 === 0;
-
-
-        setCounterState(state => {
-            return {
-                ...state,
-                isEven,
-            };
-        });
-    }, [counterState.countValue]);
+    const { countValue, isEven } = useSelector((state) => state.counterPage);
+    
+  
 
     const handleIncrement = useCallback( () => {
-        setCounterState((state) => {
-            return { 
-                countValue: state.countValue  + 1,
-        };
-    });
-}, []);
+        dispatch(INCREMENT_COUNTER_VALUE());
+    }, [dispatch]);
 
     const handleDecrement = useCallback( () => {
-        setCounterState((state) => {
-            return { 
-                countValue: state.countValue  - 1,
-        };
-    });
-}, []);
+        dispatch(DECREMENT_COUNTER_VALUE());
+    }, [dispatch]);
+
+      useEffect( () => {
+           dispatch(CHECK_PARITY_TYPE());
+    }, [dispatch, countValue]);
 
     const handleGoBack = () => {
-        history.pop();
+       history.pop();
     }
 
-
 return (
-        <Counter handleGoBack={handleGoBack}
+        <Counter 
         handleDecrement={handleDecrement}
-        countValue={counterState.countValue}
         handleIncrement={handleIncrement}
-        isEven={counterState.isEven} />
+        countValue={countValue}
+        isEven={isEven}
+        handleGoBack={handleGoBack}       
+        />
     ); 
 };
 
-export default CounterPageContainer;      
+export default CounterPageContainer;  
