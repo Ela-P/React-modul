@@ -1,0 +1,51 @@
+.counter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    min-height: 100px;
+    border: 1px solid black;
+    padding-top: 20px;
+    background: chartreuse;
+    border-radius: 5%;
+}
+
+
+.counterValue {
+    max-width: 70px;
+    width: 100%;
+    background: white;
+    margin-bottom: 10px;
+    border-radius: 10%;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.counterType {
+    text-align: center;
+    max-width: 70px;
+    width: 100%;
+    background: white;
+    border: 1px solid black;
+    border-radius: 10%;
+}
+
+.counterBut {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    outline: none;
+    
+}
+
+.counterButt {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10%;
+    outline: none;
+}
